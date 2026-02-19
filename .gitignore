@@ -23,4 +23,5 @@ Thumbs.db
 
 # Development
 _config_dev.yml
-*.bat
+.claude/
+.claudeignore

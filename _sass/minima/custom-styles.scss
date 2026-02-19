@@ -15,7 +15,20 @@ body {
 }
 
 .site-header {
-    display: table;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-top: none;
+    border-bottom: none;
+    background-color: var(--minima-background-color);
+    transition: transform 0.3s ease;
+}
+
+.site-header.header-hidden {
+    transform: translateY(-100%);
 }
 
 .site-title:hover {
@@ -27,8 +40,7 @@ body {
 }
 
 .project-name-no-link {
-
-    color: black;
+    color: inherit;
     display: inline;
     text-decoration: none !important;
 }
@@ -47,6 +59,7 @@ body {
     td, th {
         border-collapse: collapse;
         border: none;
+        padding-left: 0;
         padding-right: 0;
         margin-right: 0;
     }
@@ -63,10 +76,28 @@ body {
 .project-date {
     font-style: italic;
     text-align: right;
+    vertical-align: top;
+    white-space: nowrap;
+    padding-left: 1em;
 }
 
 .project-media {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 6px;
+    color: var(--minima-brand-color-dark);
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+.theme-toggle:hover {
+    color: var(--minima-text-color);
 }

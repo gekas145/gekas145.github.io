@@ -1,4 +1,8 @@
 
+url: "https://gekas145.github.io"
+
+permalink: /:year/:month/:day/:title
+
 titles_from_headings:
   enabled:     true
   strip_title: true
@@ -20,7 +24,7 @@ minima:
   # solarized-light	   Light variant of solarized color scheme.
   # solarized-dark	   Dark variant of solarized color scheme.
   # solarized	         Adaptive skin for solarized color scheme skins.
-  skin: classic
+  skin: auto
   
 
 
