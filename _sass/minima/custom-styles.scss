@@ -35,6 +35,19 @@ body {
     text-decoration: none;
 }
 
+.projects-list > li {
+    border: 1px solid var(--minima-border-color-01);
+    border-radius: 8px;
+    padding: 1.2em 1.4em;
+    margin-bottom: 1.5em;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        border-color: var(--minima-brand-color);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+}
+
 .project-name {
     display: inline;
 }
