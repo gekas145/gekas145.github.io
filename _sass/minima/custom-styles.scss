@@ -1,6 +1,28 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
+:root {
+    --project-tool-tag-bg: rgba(255, 191, 0, 0.25);
+    --project-tool-tag-border: rgba(255, 191, 0, 0.5);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --project-tool-tag-bg: var(--minima-code-background-color);
+        --project-tool-tag-border: var(--minima-border-color-02);
+    }
+}
+
+html[data-theme="dark"] {
+    --project-tool-tag-bg: rgba(255, 191, 0, 0.25);
+    --project-tool-tag-border: rgba(255, 191, 0, 0.5);
+}
+
+html[data-theme="light"] {
+    --project-tool-tag-bg: var(--minima-code-background-color);
+    --project-tool-tag-border: var(--minima-border-color-02);
+}
+
 body {
     font-size: min(200%, 20px);
 }
@@ -58,40 +80,37 @@ body {
     text-decoration: none !important;
 }
 
-.project-data-table {
-    border-collapse: collapse;
-    border: none;
-    border-spacing: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    padding-right: 0;
-    width: 100%;
-    display: table;
-
-    td, th {
-        border-collapse: collapse;
-        border: none;
-        padding-left: 0;
-        padding-right: 0;
-        margin-right: 0;
-    }
+.project-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em;
 }
 
 .project-tools {
-    font-weight: bold;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    flex: 1;
+}
+
+.project-tool-tag {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0.15em 0.55em;
+    border-radius: 4px;
+    border: 1px solid var(--project-tool-tag-border);
+    background-color: var(--project-tool-tag-bg);
+    white-space: nowrap;
 }
 
 .project-date {
-    font-style: italic;
-    text-align: right;
-    vertical-align: top;
+    font-size: 0.85em;
+    color: var(--minima-brand-color);
     white-space: nowrap;
-    padding-left: 1em;
+    margin-left: auto;
 }
 
 .project-media {
