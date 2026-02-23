@@ -76,4 +76,4 @@
     path: /assets/projects/mnist_draw_app.gif
     size: [72, 54]
   description: >
-    Multi Layer Perseptron(MLP) and some optimizers(SGD, momentum) implemented in numpy from scratch. Trained to recognize handwritten digits from original MNIST dataset. Comes with simple drawing application to test on seld-drawn samples.
+    Multi Layer Perceptron(MLP) and some optimizers(SGD, momentum) implemented in numpy from scratch. Trained to recognize handwritten digits from original MNIST dataset. Comes with simple drawing application to test on seld-drawn samples.

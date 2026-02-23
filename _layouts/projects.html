@@ -35,17 +35,19 @@ layout: base
             <span class="project-date">{{ project.date }}</span>
           </div>
 
-          {%- if project.media -%}
-            {%- if project.media.size -%}
-              <img src="{{ project.media.path }}" class="project-media" style="width: {{ project.media.size[0] }}%; height: {{ project.media.size[1] }}%;" loading="lazy">
-            {%- else -%}
-              <img src="{{ project.media.path }}" class="project-media" loading="lazy">
+          <div class="project-body">
+            {%- if project.media -%}
+              {%- if project.media.size -%}
+                <img src="{{ project.media.path }}" class="project-media" style="width: {{ project.media.size[0] }}%; height: {{ project.media.size[1] }}%;" loading="lazy">
+              {%- else -%}
+                <img src="{{ project.media.path }}" class="project-media" loading="lazy">
+              {%- endif -%}
             {%- endif -%}
-          {%- endif -%}
 
-          <p class="project-description">
-            {{ project.description }}
-          </p>
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+          </div>
       </li>
       
 
