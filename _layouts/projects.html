@@ -25,27 +25,29 @@ layout: base
             </a>
           {%- endif -%}
           
-          <table class="project-data-table">
-            <tbody>
-            <tr>
-              <td class="project-tools">{{ project.tools }}</td>
-              <td class="project-date">{{ project.date }}</td>
-            </tr>
-          </tbody>
+          <div class="project-meta">
+            <div class="project-tools">
+              {%- assign tools = project.tools | split: ", " -%}
+              {%- for tool in tools -%}
+                <span class="project-tool-tag">{{ tool }}</span>
+              {%- endfor -%}
+            </div>
+            <span class="project-date">{{ project.date }}</span>
+          </div>
 
-          </table>
-
-          {%- if project.media -%}
-            {%- if project.media.size -%}
-              <img src="{{ project.media.path }}" class="project-media" style="width: {{ project.media.size[0] }}%; height: {{ project.media.size[1] }}%;" loading="lazy">
-            {%- else -%}
-              <img src="{{ project.media.path }}" class="project-media" loading="lazy">
+          <div class="project-body">
+            {%- if project.media -%}
+              {%- if project.media.size -%}
+                <img src="{{ project.media.path }}" class="project-media" style="width: {{ project.media.size[0] }}%; height: {{ project.media.size[1] }}%;" loading="lazy">
+              {%- else -%}
+                <img src="{{ project.media.path }}" class="project-media" loading="lazy">
+              {%- endif -%}
             {%- endif -%}
-          {%- endif -%}
 
-          <p class="project-description">
-            {{ project.description }}
-          </p>
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+          </div>
       </li>
       
 
